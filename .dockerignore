@@ -1,7 +1,10 @@
 __pycache__/
-.pytest_cache/
 *.pyc
 *.pyo
+*.pyd
+*.so
 *.log
-.git/
+.DS_Store
+.git
+.gitignore
 .vscode/

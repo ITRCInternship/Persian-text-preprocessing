@@ -1,10 +1,10 @@
-from normalizer_pkg import (
+from preproc_pkg.normalizer_pkg import (
     normalize,
     HazmNormalizer,
     ParsivarNormalizer,
 )
-from normalizer_pkg.cleaners import html, url, nonbmp, collapse_spaces
-from normalizer_pkg.pinglish import convert as pinglish_convert
+from preproc_pkg.normalizer_pkg.cleaners import html, url, nonbmp, collapse_spaces
+from preproc_pkg.normalizer_pkg.pinglish import convert as pinglish_convert
 
 RAW = """
 <h1>سلاممم!!!</h1> miam khoneh 😊
@@ -30,9 +30,8 @@ stage2 = url.process(stage1)
 stage3 = nonbmp.process(stage2)
 stage4 = collapse_spaces.process(stage3)
 print(stage4)
+print()
 
 print("=== Parsivar only, forced Pinglish conversion ===")
-pv_only = ParsivarNormalizer(
-    pinglish_conversion_needed=True,
-)
+pv_only = ParsivarNormalizer(pinglish_conversion_needed=True)
 print(pv_only("salam chetori? man khoneh miram."))

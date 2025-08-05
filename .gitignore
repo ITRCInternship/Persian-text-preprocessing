@@ -1,16 +1,21 @@
 __pycache__/
-.pytest_cache/
-*.pyc
+*.py[cod]
 *.pyo
 *.pyd
-*.swp
-*.swo
-.env
+*.so
+
+.venv/
+env/
 venv/
-.env/
-.idea/
-.vscode/
 
 *.log
+*.coverage
+coverage.xml
+htmlcov/
 
-*.tar
+.root/
+.cache/
+*.cache
+
+.DS_Store
+Thumbs.db
